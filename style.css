@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR','NanumSquareRound', sans-serif;
+}
+*:hover{
+    transition-duration: .3s;
+}
+
+body{
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+img{
+    display: block;
+    width: 100%;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+
+/* 헤더 */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 0;
+    z-index: 2;
+    transform: translateX(-50%);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.116);
+    width: 100%;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+.header-container div{
+    width: 190px;
+    height: 44px;
+    margin: auto 0;
+}
+.header-menu{
+    display: flex;
+}
+.header-menu ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin : 0;
+    padding : 0;
+}
+.header-menu ul li{
+    list-style-type: none;
+    margin-left: 49px;
+    opacity: 0.5;
+    font-family: 'Noto Sans KR';
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1.35px;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.5);
+}
+.header-menu ul .active{
+    opacity: 1;
+    color: rgb(0, 0, 0);
+}
+.header-menu ul li:hover{
+    opacity: 1;
+    color: rgb(0, 0, 0);
+}
+
+
+/* top */
+.top{
+    width: 100%;
+    height: 1080px;
+    background : url(img/pattern.png) repeat;
+    position: relative;
+}
+.top .container{
+    position: relative;
+}
+.top .stick-img{
+    position: absolute;
+    right: 107px;
+}
+.stick-img{
+    width: 240px;
+}
+/* 동그란 아이콘 이미지 */
+.top .icon{
+    width: 100px;
+    height: 100px;
+}
+.mic{
+    position: absolute;
+    top: 208px;
+    left: 124px;
+}
+.headphone{
+    position: absolute;
+    top: 538px;
+    left: 49px;
+}
+.web{
+    position: absolute;
+    top: 895px;
+    left: 172px;
+}
+.link{
+    position: absolute;
+    top: 334px;
+    right: 194px;
+}
+.chat{
+    position: absolute;
+    top: 667px;
+    right: 80px;
+}
+.newspaper{
+    position: absolute;
+    top: 813px;
+    right: 224px;
+}
+/* 네모 이미지 */
+.box-icon{
+    width: 321px;
+    height: 111px;
+    position: absolute;
+    z-index: 1;
+}
+.top .whenever{
+    top : 366px;
+}
+.top .whoever{
+    top : 708px;
+}
+.top .wherever{
+    width: 360px;
+    top : 528px;
+    right: 0px;
+}
+/* 가운데 모바일 화면 */
+.mobile{
+    width: 640px;
+    height: 943px;
+    position: relative;
+    top: 141px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image : url(img/mobile.png);
+}
+.mobile div{
+    text-align: center;
+}
+.mobile .header{
+    width: 322px;
+    position: relative;
+    top: 150px;
+    left: 158px;
+}
+.mobile .header:after{
+    content: '';
+    height: 165px;
+    width: 100%;
+    display: block;
+}
+.top-slogan{
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -2.1px;
+    text-align: center;
+    color: #666666;
+}
+.top-date{
+    margin: 0 auto;
+    margin-top: 13px;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 53px;
+    letter-spacing: -1.95px;
+    text-align: center;
+    color: #ffffff;
+    width: 474px;
+    height: 53px;
+    background-color: #32cada;
+    border-radius: 26.5px;
+}
+.top-body{
+    margin-top : 43px;
+    margin-bottom: 54px;
+}
+.top-body span:nth-child(1){
+    font-size: 22px; 
+    color:black;
+}
+.top-body span:nth-child(2){
+    display : inline-block; 
+    margin-top : 20px; 
+    font-size: 24px; 
+    color:#23aab7;
+}
+.top-ppl-img{
+    width: 303px;
+    height: 107px;
+    margin:  0 auto;
+    margin-top : 54px;
+}
+.top-btn{
+    font-size: 24px;
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #23aab7;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+}
+
+
+/* 축제소개 */
+.intro{
+    width: 100%;
+    height: 820px;
+    background : url(img/middle-bg.png);
+    position: relative;
+}
+.intro .stick-img{
+    position: absolute;
+    left: 86px;
+}
+.middle-pattern{
+    position: absolute;
+    bottom: 0;
+}
+.intro .stick-blue-img{
+    position: absolute;
+    right: 92px;
+    top: 684px;
+    width: 362px;
+}
+/* 각 섹션의 타이틀 */
+.title-container{
+    position: relative;
+    top: 77px;
+}
+.title-tab-container{
+    display: flex;
+}
+.title-tab{
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-right: 4px;
+    background-color: #e3e9e9;
+}
+.title-active{
+    width: 30px;
+    background-color: black;
+}
+.title{
+    display: inline-block;
+    width: 112px;
+    height: 31px;
+    margin: 20px 0 0 0;
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -2.55px;
+    text-align: center;
+    color: black;
+}
+/* 슬로건 */
+.slogan-container{
+    position: relative;
+    top: 170px;
+    left: 145px;
+    display: flex;
+    height: 150px;
+}
+.slogan-wrap{
+    margin-right: 79px;
+}
+.slogan-container .whoever{
+    margin-right: 0;
+}
+.slogan{
+    font-size: 80px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -6px;
+    text-align: left;
+    color: #3f5381;
+}
+.slogan:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    opacity: 0.2;
+    position: relative;
+    top: -18px;
+    background-color: #3f5381;
+}
+.everywhere .slogan:after{
+    background-color: #f4af64;
+}
+.whoever .slogan:after{
+    background-color: #53c6d2;
+}
+.slogan-wrap p{
+    opacity: 0.2;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -2.1px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+/* 내용 */
+.intro-body{
+    display: flex;
+    position: relative;
+    top: 300px;
+}
+.intro-body div{
+    width: 450px;
+}
+
+
+/* 프로그램 */
+.program{
+    width: 100%;
+    height: 1322px;
+    background-color : white;
+    position: relative;
+}
+.program-right{
+    position: absolute;
+    width: 118px;
+    bottom: 179px;
+    right: 39px;
+}
+.program-map-container{
+    display: flex;
+    position: relative;
+    top: 77px;
+}
+.program-map{
+    width: 807px;
+}
+/* 리스트 */
+.program-list-container{
+    width: 285px;
+    margin-left: 48px;
+}
+.program-title{
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: white;
+    padding-left: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.program-title:after{
+    content : '';
+    display: block;
+    background-image: url(img/middle-bg.png);
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+}
+.program-list ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+}
+.program-list li{
+    height: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: -0.65px;
+    text-align: left;
+    color: #888888;
+    list-style-type: none;
+    border-bottom: 1px solid lightgray;
+    padding-inline-start: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.program-list li span{
+    display: inline-block;
+}
+.circle{
+    width: 14px;
+    height: 14px;
+    border: solid 1px transparent;
+    border-radius: 50%;
+}
+.bar{
+    width: 5px;
+    height: 1px;
+    background-color: transparent;
+    transform: rotate(45deg);
+    position: relative;
+    right: 4px;
+}
+.program-list .anytime li:hover{
+    color: #2d53a4;
+}
+.program-list .anytime li:hover .circle{
+    border: solid 1px #2d53a4;
+}
+.program-list .anytime li:hover .bar{
+    background-color: #2d53a4;
+}
+.program-list .anywhere li:hover{
+    color: #ed6e01;
+}
+.program-list .anywhere li:hover .circle{
+    border: solid 1px #ed6e01;
+}
+.program-list .anywhere li:hover .bar{
+    background-color: #ed6e01;
+}
+.program-list .anyone li:hover{
+    color : #23aab7;
+}
+.program-list .anyone li:hover .circle{
+    border: solid 1px #23aab7;
+}
+.program-list .anyone li:hover .bar, .program-list .anyone #list-in-list li:hover span{
+    background-color: #23aab7;
+}
+.program-list .here li:hover{
+    color: #574f9f;
+}
+.program-list .here li:hover .circle{
+    border: solid 1px #574f9f;
+}
+.program-list .here li:hover .bar{
+    background-color: #574f9f;
+}
+#list-in-list{
+    height: fit-content;
+    display: block;
+}
+#list-in-list ul{
+    padding-bottom: 15px;
+}
+#list-in-list ul li{
+    height : 30px;
+    border-bottom: 1px solid transparent;
+    padding-inline-start: 0;
+    display: block;
+}
+#list-in-list ul li span{
+    display: inline-block;
+    width: 6px;
+    height: 1px;
+    background-color: black;
+    margin: 4px 10px;
+}
+
+
+/* 행사일정 */
+.plan{
+    width: 100%;
+    height: 1120px;
+    background : url(img/middle-bg.png) repeat;
+    position: relative;
+}
+/* 타임테이블 */
+.table-container{
+    position: relative;
+    top: 118px;
+}
+.date{
+    display: flex;
+    justify-content: center;
+}
+.date div{
+    width: 120px;
+    font-family: 'NanumSquareRound';
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -1.8px;
+    text-align: left;
+    color: #aaaaaa;
+    margin: 0 15px;
+    padding-bottom: 9px;
+    border-bottom: 2px solid #aaaaaa;
+}
+.date div:hover{
+    border-bottom: 2px solid #23aab7;
+    font-weight: 600;
+    color: #23aab7;
+    transition-duration: 0ms;
+}
+.table-wrap{
+    display: flex;
+}
+.time{
+    padding-top: 98px;
+    width: 120px;
+    position: absolute;
+}
+.time div{
+    height: 61px;
+    line-height: 61px;
+}
+.time div:before{
+    content:'';
+    width: 1055px;
+    height: 0.5px;
+    background-color: lightgray;
+    display: block;
+    position: absolute;
+}
+.time div:last-child:before{
+    height: 61px;
+    background-color: transparent;
+    border-top: 0.5px solid lightgray;
+    border-bottom: 0.5px solid lightgray;
+}
+.table-content{
+    display: flex;
+    margin-top: 48px;
+    position: absolute;
+    left: 120px;
+}
+.table-content-wrapper{
+    display: flex;
+}
+.table-content-box{
+    width: 325px;
+}
+.content-title{
+    width: 285px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1.2px;
+}
+.wrap{
+    overflow: hidden;
+    width: 285px;
+    height: 50px;
+    margin-bottom: 11px;
+}
+.content{
+    width: 285px;
+    height: 50px;
+    font-size: 18px;
+    font-family: 'NanumSquareRound';
+    border: solid 1px #2d53a4;
+    background-color: #ffffff;
+    position: relative;
+    padding-inline-start: 16px;
+    letter-spacing: -1.35px;
+}
+.content:after{
+    content : '';
+    display: block;
+    background-color: transparent;
+    background: url(img/middle-bg.png);
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -7px;
+    right: -7px;
+    border: solid 1px #2d53a4;
+}
+.first{
+    margin-top: 16px;
+}
+.one{
+    height: 50px;
+    line-height: 50px;
+}
+.two{
+    height: 111px;
+    line-height: 111px;
+}
+.three{
+    height: 172px;
+    line-height: 172px;
+}
+.four{
+    height: 233px;
+    line-height: 233px;
+}
+.seven{
+    height : 416px;
+}
+.wrap .seven{
+    padding-top: 107px;
+}
+.seven ul{
+    list-style-type: '-  ';
+    padding-inline-start: 16px;
+    letter-spacing: -0.98px;
+    font-size: 13px;
+    margin-top: 6px;
+}
+.seven ul li{
+    font-family: 'NanumSquareRound';
+}
+.whenever .content{
+    border-color: #2d53a4;
+}
+.wherever .content, .wherever .content:after{
+    border-color: #ed6e01;
+}
+.whoever .content, .whoever .content:after{
+    border-color: #23aab7;
+}
+
+
+
+/* 오시는 길 */
+.place{
+    width: 100%;
+    background-color : white;
+    position: relative;
+}
+.place .container .title-container{
+    position: absolute;
+    top: 77px;
+}
+/* 지도 */
+.map{
+    position: relative;
+    top: 173px;
+    width: 100%;
+}
+.map img{
+    display: block;
+    width: 100%;
+}
+/* 하단 주소 */
+.place-bottom-container{
+    display: flex;
+    position: relative;
+    top: 173px;
+    margin-top:48px;
+    padding-bottom: 316px;
+}
+.left{
+    margin-right: 240px;
+}
+.bottom-title{
+    width: 82px;
+    height: 22px;
+    font-size: 24px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1.8px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 40px;
+}
+.number{
+    display: block;
+    width: 34px;
+    height: 34px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 32px;
+    margin-right: 36px;
+}
+.number1{
+    background-color: #3d61ae;
+}
+.number2{
+    background-color: #71ce7f;
+}
+.address{
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.55;
+    letter-spacing: -1.65px;
+    text-align: justify;
+    color: var(--black);
+}
+.bottom-body-up, .bottom-body-down{
+    display: flex;
+}
+.bottom-body-up{
+    margin-bottom: 40px;
+}
+.icon-box{
+    width: 34px;
+    height: 34px;
+    border: solid 1px #23aab7;
+    background-color: #ffffff;
+    margin-right: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-box img{
+    width: 18px;
+    color: #28acb9;
+}
+
+
+/* footer */
+footer{
+    height: 100px;
+    background-color: black;
+    position: relative;
+    top: 173px;
+}
+footer p{
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%,-50%);
+    font-family: 'NanumSquareRound';
+}
+
+
+
+
+/* 글자색 클래스 */
+.blue-font{
+    color : #2d53a4;
+}
+.orange-font{
+    color: #f4af64;
+}
+.sky-font{
+    color: #53c6d2;
+}
+/* 배경색 클래스 */
+.blue{
+    background-color: #2d53a4;
+}
+.orange{
+    background-color: #ed6e01;
+}
+.sky{
+    background-color: #23aab7;
+}
+.purple{
+    background-color: #574f9f;
+}
