@@ -48,6 +48,8 @@ header {
     display: flex;
     justify-content: space-between;
     height: 100px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 .header-container div{
     width: 190px;
@@ -88,7 +90,7 @@ header {
 }
 
 
-/* top */
+/* 첫 화면 */
 .preview{
     width: 100%;
     height: 1080px;
@@ -140,6 +142,7 @@ header {
     position: absolute;
     top: 813px;
     right: 224px;
+    z-index: 1;
 }
 /* 네모 이미지 */
 .box-icon{
@@ -148,13 +151,13 @@ header {
     position: absolute;
     z-index: 1;
 }
-.preview .whenever{
+.preview .anytime{
     top : 366px;
 }
-.preview .whoever{
+.preview .anyone{
     top : 708px;
 }
-.preview .wherever{
+.preview .anywhere{
     width: 360px;
     top : 528px;
     right: 0px;
@@ -254,7 +257,7 @@ header {
     position: absolute;
     left: 86px;
 }
-.middle-pattern{
+.intro .middle-pattern{
     position: absolute;
     bottom: 0;
 }
@@ -272,18 +275,18 @@ header {
 .title-tab-container{
     display: flex;
 }
-.title-tab{
+.title-tab-container span{
     display: block;
     width: 20px;
     height: 2px;
     margin-right: 4px;
     background-color: #e3e9e9;
 }
-.title-active{
+.title-tab-container .title-active{
     width: 30px;
     background-color: black;
 }
-.title{
+.title-container .title{
     display: inline-block;
     width: 112px;
     height: 31px;
@@ -317,7 +320,6 @@ header {
     font-style: normal;
     letter-spacing: -6px;
     text-align: left;
-    color: #3f5381;
 }
 .slogan:after{
     content: '';
@@ -327,18 +329,23 @@ header {
     opacity: 0.2;
     position: relative;
     top: -18px;
+}
+.anytime .slogan{
+    color: #3f5381;
+}
+.anytime .slogan:after{
     background-color: #3f5381;
 }
-.everywhere .slogan{
+.anywhere .slogan{
     color: #f4af64;
 }
-.everywhere .slogan:after{
+.anywhere .slogan:after{
     background-color: #f4af64;
 }
-.whoever .slogan{
+.anyone .slogan{
     color: #53c6d2;
 }
-.whoever .slogan:after{
+.anyone .slogan:after{
     background-color: #53c6d2;
 }
 .slogan-wrap p{
@@ -358,6 +365,7 @@ header {
     display: flex;
     position: relative;
     top: 300px;
+    margin: 0 -30px;
 }
 .intro-body div{
     width: 50%;
@@ -379,11 +387,13 @@ header {
     right: 39px;
     z-index: 2;
 }
+/* 프로그램 지도와 표 */
 .program-map-container{
     display: flex;
     position: relative;
     top: 77px;
 }
+/* 지도 */
 .program-map{
     flex: 1;
 }
@@ -442,56 +452,70 @@ header {
 .program-list li span{
     display: inline-block;
 }
-.circle{
+.program-list ul li div{
+    opacity: 0;
+}
+.program-list ul li:hover div{
+    opacity: 1;
+}
+.program-list ul li div span:nth-child(1){
     width: 14px;
     height: 14px;
-    border: solid 1px transparent;
+    border: solid 1px black;
     border-radius: 50%;
 }
-.bar{
+.program-list ul li div span:nth-child(2){
     width: 5px;
-    height: 1px;
+    height: 5px;
     background-color: transparent;
-    transform: rotate(45deg);
+    border-left: solid 1px black;
+    transform: rotate(-45deg);
     position: relative;
-    right: 4px;
+    right: 1px;
 }
-.program-list .anytime li:hover{
-    color: #2d53a4;
+/* 돋보기 색 지정 */
+.anytime ul li div span{
+    border-color: #2d53a4 !important;
 }
-.program-list .anytime li:hover .circle{
-    border: solid 1px #2d53a4;
+.anywhere ul li div span{
+    border-color: #ed6e01 !important;
 }
-.program-list .anytime li:hover .bar{
+.anyone ul li div span{
+    border-color: #23aab7 !important;
+}
+.here li div span{
+    border-color: #574f9f !important;
+}
+/* 제목 배경색 */
+.anytime .program-title{
     background-color: #2d53a4;
 }
-.program-list .anywhere li:hover{
-    color: #ed6e01;
-}
-.program-list .anywhere li:hover .circle{
-    border: solid 1px #ed6e01;
-}
-.program-list .anywhere li:hover .bar{
+.anywhere .program-title{
     background-color: #ed6e01;
 }
-.program-list .anyone li:hover{
-    color : #23aab7;
-}
-.program-list .anyone li:hover .circle{
-    border: solid 1px #23aab7;
-}
-.program-list .anyone li:hover .bar, .program-list .anyone #list-in-list li:hover span{
+.anyone .program-title{
     background-color: #23aab7;
 }
-.program-list .here li:hover{
-    color: #574f9f;
-}
-.program-list .here li:hover .circle{
-    border: solid 1px #574f9f;
-}
-.program-list .here li:hover .bar{
+.here .program-title{
     background-color: #574f9f;
 }
+/* 호버 */
+.anytime li:hover{
+    color: #2d53a4;
+}
+.anywhere li:hover{
+    color: #ed6e01;
+}
+.anyone li:hover{
+    color : #23aab7;
+}
+.anyone #list-in-list li:hover span{
+    background-color: #23aab7;
+}
+.here li:hover{
+    color: #574f9f;
+}
+/* 중첩리스트 */
 #list-in-list{
     height: fit-content;
     display: block;
@@ -526,6 +550,7 @@ header {
     position: relative;
     top: 118px;
 }
+/* 날짜 */
 .date{
     display: flex;
     justify-content: center;
@@ -552,11 +577,13 @@ header {
 }
 .table-wrap{
     display: flex;
+    justify-content: center;
 }
+/* 시간 */
 .time{
     padding-top: 98px;
     width: 120px;
-    position: absolute;
+    /* position: absolute; */
 }
 .time div{
     height: 61px;
@@ -576,18 +603,22 @@ header {
     border-top: 0.5px solid lightgray;
     border-bottom: 0.5px solid lightgray;
 }
+/* 타임테이블 내용 시작 */
 .table-content{
     display: flex;
     margin-top: 48px;
-    position: absolute;
-    left: 120px;
+    /* position: absolute; */
+    /* left: 120px; */
 }
 .table-content-wrapper{
     display: flex;
-    width: 975px;
+    width: 935px;
 }
 .table-content-box{
     width: 325px;
+}
+.table-content-box:last-child{
+    width: 285px;
 }
 .content-title{
     width: 285px;
@@ -595,6 +626,7 @@ header {
     font-weight: 500;
     letter-spacing: -1.2px;
 }
+
 .wrap{
     overflow: hidden;
     width: 285px;
@@ -625,6 +657,37 @@ header {
     right: -7px;
     border: solid 1px #2d53a4;
 }
+/* 제목 배경색 설정 */
+.anytime .content-title{
+    background-color: #2d53a4;
+}
+.anywhere .content-title{
+    background-color: #ed6e01;
+}
+.anyone .content-title{
+    background-color: #23aab7;
+}
+/* 구역 별 글자색 설정 */
+.anytime .wrap .content{
+    color : #2d53a4;
+}
+.anywhere .wrap .content{
+    color: #f4af64;
+}
+.anyone .wrap .content{
+    color: #53c6d2;
+}
+/* 구역 별 테두리색 설정 */
+.anytime .content{
+    border-color: #2d53a4;
+}
+.anywhere .content, .anywhere .content:after{
+    border-color: #ed6e01;
+}
+.anyone .content, .anyone .content:after{
+    border-color: #23aab7;
+}
+/* 컨텐츠 박스 크기 설정 */
 .first{
     margin-top: 16px;
 }
@@ -660,16 +723,6 @@ header {
 .seven ul li{
     font-family: 'NanumSquareRound';
 }
-.whenever .content{
-    border-color: #2d53a4;
-}
-.wherever .content, .wherever .content:after{
-    border-color: #ed6e01;
-}
-.whoever .content, .whoever .content:after{
-    border-color: #23aab7;
-}
-
 
 
 /* 오시는 길 */
@@ -683,17 +736,13 @@ header {
     top: 77px;
 }
 /* 지도 */
-.map{
+.place .map{
     position: relative;
     top: 173px;
     width: 100%;
 }
-.map img{
-    display: block;
-    width: 100%;
-}
 /* 하단 주소 */
-.place-bottom-container{
+.address-info-box{
     display: flex;
     position: relative;
     top: 173px;
@@ -701,11 +750,12 @@ header {
     margin: 0 -20px;
     margin-top:48px;
 }
-.place-bottom-container .left, .place-bottom-container .right{
+/* 왼쪽 : 오시는 길 */
+.info-box{
     width: 50%;
     padding : 0 20px;
 }
-.bottom-title{
+.address-info-box .title{
     width: 82px;
     height: 22px;
     font-size: 24px;
@@ -718,7 +768,11 @@ header {
     color: var(--black);
     margin-bottom: 40px;
 }
-.number{
+.info-box .body{
+    display: flex;
+    margin-bottom : 40px;
+}
+.station-number{
     display: block;
     width: 34px;
     height: 34px;
@@ -728,10 +782,10 @@ header {
     line-height: 32px;
     margin-right: 36px;
 }
-.number1{
+.line1{
     background-color: #3d61ae;
 }
-.number2{
+.line2{
     background-color: #71ce7f;
 }
 .address{
@@ -743,12 +797,6 @@ header {
     letter-spacing: -1.65px;
     text-align: justify;
     color: var(--black);
-}
-.bottom-body-up, .bottom-body-down{
-    display: flex;
-}
-.bottom-body-up{
-    margin-bottom: 40px;
 }
 .icon-box{
     width: 34px;
@@ -789,35 +837,9 @@ footer p{
 }
 
 
-
-
-/* 글자색 클래스 */
-.anytimeC{
-    color : #2d53a4;
-}
-.anywhereC{
-    color: #f4af64;
-}
-.anyoneC{
-    color: #53c6d2;
-}
-/* 배경색 클래스 */
-.anytimeBG{
-    background-color: #2d53a4;
-}
-.anywhereBG{
-    background-color: #ed6e01;
-}
-.anyoneBG{
-    background-color: #23aab7;
-}
-.hereBG{
-    background-color: #574f9f;
-}
-
-@media (max-width : 1200px) {
-    .container{
-        width: 90%;
+@media (max-width : 1140px) {
+    section{
+        width: 350% !important;
     }
     .table-content{
         width: 300px;
