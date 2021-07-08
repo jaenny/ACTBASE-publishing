@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -24,11 +24,11 @@
     </header>
     
     <!-- 첫 화면 -->
-    <section class="top">
+    <section class="preview">
         <div class="stick-img"><img src="img/stick.png" alt=""></div>
-        <div class="container">
-        <!-- 동그란 아이콘 이미지 -->
-            
+        <div class="container preview-container">
+        
+            <!-- 동그란 아이콘 이미지 -->
             <div class="mic icon"><img src="img/mic.png" alt=""></div>
             <div class="headphone icon"><img src="img/headphone.png" alt=""></div>
             <div class="web icon"><img src="img/web.png" alt=""></div>
@@ -42,14 +42,14 @@
             <div class="box-icon wherever"><img src="img/anywhere.png" alt=""></div>
             <!-- 가운데 모바일 화면 -->
             <div class="mobile">
-                <div class="header">
+                <div class="header-img">
                     <img src="img/header.png" alt="">
                 </div>
 
-                <div class="top-slogan">언제 어디서나, 민주주의 서울</div>
-                <div class="top-date">09.20.(금) ~ 09.21.(토) 서울광장일대</div>
+                <div class="slogan">언제 어디서나, 민주주의 서울</div>
+                <div class="date">09.20.(금) ~ 09.21.(토) 서울광장일대</div>
 
-                <div class="top-body">
+                <div class="body">
                     <span>
                     서울시에 원하는 것을 말하고<br>
                     서울시는 우리의 의견에 대답하는<br>
@@ -58,14 +58,15 @@
                     <span>언제, 어디서나, 민주주의 서울</span>
                 </div>
 
-                <div class="top-ppl-img">
+                <div class="ppl-img">
                     <img src="img/ppl.png" alt="">
                 </div>
 
-                <div class="top-btn">
-                    정책제안 하러가기
-                </div>
-
+                <a href="#">
+                    <div class="btn">
+                        정책제안 하러가기
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -95,18 +96,18 @@
                     <p>anytime</p>
                 </div>
                 <div class="slogan-wrap everywhere">
-                    <div class="slogan orange-font">어디서나,</div>
+                    <div class="slogan">어디서나,</div>
                     <p>anyone</p>
                 </div>
                 <div class="slogan-wrap whoever">
-                    <div class="slogan sky-font">누구나,</div>
+                    <div class="slogan">누구나,</div>
                     <p>anywhere</p>
                 </div>
             </div>
             <!-- 내용 -->
             <div class="intro-body">
-                <div class="left"><b>2019 함께서울 정책박람회</b>는 시민들의 목소리에 귀를 기울이고 소통할 수 있는 장입니다. 시민들의 자발적인 참여와 소통을 최우선 목표로 하여 시민들의 시청참여방안 확대와 다양한 연령대 시민들의 공감대를 형성하고자 합니다.</div>
-                <div class="right">
+                <div><b>2019 함께서울 정책박람회</b>는 시민들의 목소리에 귀를 기울이고 소통할 수 있는 장입니다. 시민들의 자발적인 참여와 소통을 최우선 목표로 하여 시민들의 시청참여방안 확대와 다양한 연령대 시민들의 공감대를 형성하고자 합니다.</div>
+                <div>
                     <b>서울정책 오픈마이크, 나도 서울시 정책 제안가 등 시민들의 자유롭게 참여할 수 있는 공론장, 시민 밀착형 참여 프로그램, 이색적이고 다양한 연령층이 즐길 수 있는 정책 체험 프로그램</b>이 있습니다.
                     <br>
                     <br>
@@ -140,7 +141,7 @@
                 <!-- 리스트 -->
                 <div class="program-list-container">
                     <div class="program-list">
-                        <div class="program-title blue">언제나, 민주주의 프로그램</div>
+                        <div class="program-title anytimeBG">언제나, 민주주의 프로그램</div>
                         <ul class="anytime">
                             <li><span>서울정책 오픈마이크</span><div><span class="circle"></span><span class="bar"></span></div></li>
                             <li><span>서울 협치 공론</span><div><span class="circle"></span><span class="bar"></span></div></li>
@@ -149,7 +150,7 @@
                         </ul>                        
                     </div>
                     <div class="program-list">
-                        <div class="program-title orange">어디서나, 민주주의 프로그램</div>
+                        <div class="program-title anywhereBG">어디서나, 민주주의 프로그램</div>
                         <ul class="anywhere">
                             <li><span>내가 그리는 민주주의</span><div><span class="circle"></span><span class="bar"></span></div></li>
                             <li><span>나도 서울시 정책제안가</span><div><span class="circle"></span><span class="bar"></span></div></li>
@@ -158,7 +159,7 @@
                         </ul>                        
                     </div>
                     <div class="program-list">
-                        <div class="program-title sky">누구나, 민주주의 프로그램</div>
+                        <div class="program-title anyoneBG">누구나, 민주주의 프로그램</div>
                         <ul class="anyone">
                             <li><span>정책홍보</span><div><span class="circle"></span><span class="bar"></span></div></li>
                             <li><span>정책고사</span><div><span class="circle"></span><span class="bar"></span></div></li>
@@ -175,7 +176,7 @@
                         </ul>                        
                     </div>
                     <div class="program-list">
-                        <div class="program-title purple">여기서도, 민주주의 편의시설</div>
+                        <div class="program-title hereBG">여기서도, 민주주의 편의시설</div>
                         <ul class="here">
                             <li><span>종합안내소</span><div><span class="circle"></span><span class="bar"></span></div></li>
                             <li><span>운영본부</span><div><span class="circle"></span><span class="bar"></span></div></li>
@@ -227,32 +228,32 @@
                         <div class="table-content-wrapper">
                             <!-- 블루 -->
                             <div class="whenever table-content-box">
-                                <div class="content-title program-title blue">언제나, 민주주의 프로그램</div>
+                                <div class="content-title program-title anytimeBG">언제나, 민주주의 프로그램</div>
                                 
-                                <div class="wrap first"><div class="content blue-font one">서울정책 오픈마이크</div></div>
-                                <div class="wrap two"><div class="content blue-font two">축하공연</div></div>
-                                <div class="wrap two"><div class="content blue-font two">서울정책 오픈마이크</div></div>
-                                <div class="wrap two"><div class="content blue-font two">서울시민 공론장</div></div>
-                                <div class="wrap one"><div class="content blue-font one">나도 서울시 정책 제안가로서 말해요</div></div>
-                                <div class="wrap two"><div class="content blue-font two">서울시민 토론회</div></div>
-                                <div class="wrap one">  <div class="content blue-font one">서울정책, 노래해요</div></div>
+                                <div class="wrap first"><div class="content anytimeC one">서울정책 오픈마이크</div></div>
+                                <div class="wrap two"><div class="content anytimeC two">축하공연</div></div>
+                                <div class="wrap two"><div class="content anytimeC two">서울정책 오픈마이크</div></div>
+                                <div class="wrap two"><div class="content anytimeC two">서울시민 공론장</div></div>
+                                <div class="wrap one"><div class="content anytimeC one">나도 서울시 정책 제안가로서 말해요</div></div>
+                                <div class="wrap two"><div class="content anytimeC two">서울시민 토론회</div></div>
+                                <div class="wrap one">  <div class="content anytimeC one">서울정책, 노래해요</div></div>
                             </div>
 
                             <!-- 오렌지 -->
                             <div class="wherever table-content-box">
-                                <div class="content-title program-title orange">어디서나, 민주주의 프로그램</div>
+                                <div class="content-title program-title anywhereBG">어디서나, 민주주의 프로그램</div>
 
-                                <div class="wrap first four"><div class="content four orange-font">내가 그리는 민주주의</div></div>
-                                <div class="wrap four"><div class="content four orange-font">나도 서울시 정책제안가</div></div>
-                                <div class="wrap three"><div class="content three orange-font">서울시민포럼</div></div>
+                                <div class="wrap first four"><div class="content four anywhereC">내가 그리는 민주주의</div></div>
+                                <div class="wrap four"><div class="content four anywhereC">나도 서울시 정책제안가</div></div>
+                                <div class="wrap three"><div class="content three anywhereC">서울시민포럼</div></div>
                             </div>
 
                             <!-- 스카이 -->
                             <div class="whoever table-content-box">
-                                <div class="content-title program-title sky">누구나, 민주주의 프로그램</div>
+                                <div class="content-title program-title anyoneBG">누구나, 민주주의 프로그램</div>
 
                                 <div class="wrap first seven">
-                                    <div class="content seven sky-font">
+                                    <div class="content seven anyoneC">
                                         서울정책 쉼표마당
                                         <ul>
                                             <li>정책알리미</li>
@@ -264,7 +265,7 @@
                                         정책홍보부스
                                     </div>
                                 </div>
-                                <div class="wrap four"><div class="content four sky-font">서울 속 정책캠핑</div></div>
+                                <div class="wrap four"><div class="content four anyoneC">서울 속 정책캠핑</div></div>
                             </div>
                         </div>
                     </div>

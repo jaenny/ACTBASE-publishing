@@ -89,16 +89,17 @@ header {
 
 
 /* top */
-.top{
+.preview{
     width: 100%;
     height: 1080px;
     background : url(img/pattern.png) repeat;
+    background-size: cover;
     position: relative;
 }
-.top .container{
+.preview-container{
     position: relative;
 }
-.top .stick-img{
+.preview .stick-img{
     position: absolute;
     right: 107px;
 }
@@ -106,7 +107,7 @@ header {
     width: 240px;
 }
 /* 동그란 아이콘 이미지 */
-.top .icon{
+.preview .icon{
     width: 100px;
     height: 100px;
 }
@@ -147,13 +148,13 @@ header {
     position: absolute;
     z-index: 1;
 }
-.top .whenever{
+.preview .whenever{
     top : 366px;
 }
-.top .whoever{
+.preview .whoever{
     top : 708px;
 }
-.top .wherever{
+.preview .wherever{
     width: 360px;
     top : 528px;
     right: 0px;
@@ -171,19 +172,19 @@ header {
 .mobile div{
     text-align: center;
 }
-.mobile .header{
+.mobile .header-img{
     width: 322px;
     position: relative;
     top: 150px;
     left: 158px;
 }
-.mobile .header:after{
+.mobile .header-img:after{
     content: '';
     height: 165px;
     width: 100%;
     display: block;
 }
-.top-slogan{
+.mobile .slogan{
     font-size: 28px;
     font-weight: 500;
     font-stretch: normal;
@@ -193,7 +194,7 @@ header {
     text-align: center;
     color: #666666;
 }
-.top-date{
+.mobile .date{
     margin: 0 auto;
     margin-top: 13px;
     font-size: 26px;
@@ -209,27 +210,27 @@ header {
     background-color: #32cada;
     border-radius: 26.5px;
 }
-.top-body{
+.mobile .body{
     margin-top : 43px;
     margin-bottom: 54px;
 }
-.top-body span:nth-child(1){
+.mobile .body span:nth-child(1){
     font-size: 22px; 
     color:black;
 }
-.top-body span:nth-child(2){
+.mobile .body span:nth-child(2){
     display : inline-block; 
     margin-top : 20px; 
     font-size: 24px; 
     color:#23aab7;
 }
-.top-ppl-img{
+.ppl-img{
     width: 303px;
     height: 107px;
     margin:  0 auto;
     margin-top : 54px;
 }
-.top-btn{
+.mobile .btn{
     font-size: 24px;
     width: 350px;
     height: 70px;
@@ -298,17 +299,16 @@ header {
 }
 /* 슬로건 */
 .slogan-container{
+    display: flex;
+    justify-content: space-around;
     position: relative;
     top: 170px;
-    left: 145px;
-    display: flex;
     height: 150px;
+    width: 80%;
+    margin: 0 auto;
 }
 .slogan-wrap{
-    margin-right: 79px;
-}
-.slogan-container .whoever{
-    margin-right: 0;
+    padding : 0 30px;
 }
 .slogan{
     font-size: 80px;
@@ -329,8 +329,14 @@ header {
     top: -18px;
     background-color: #3f5381;
 }
+.everywhere .slogan{
+    color: #f4af64;
+}
 .everywhere .slogan:after{
     background-color: #f4af64;
+}
+.whoever .slogan{
+    color: #53c6d2;
 }
 .whoever .slogan:after{
     background-color: #53c6d2;
@@ -354,9 +360,10 @@ header {
     top: 300px;
 }
 .intro-body div{
-    width: 450px;
+    width: 50%;
+    text-align:justify;
+    padding:0 30px;
 }
-
 
 /* 프로그램 */
 .program{
@@ -366,10 +373,11 @@ header {
     position: relative;
 }
 .program-right{
-    position: absolute;
+    position: fixed;
     width: 118px;
-    bottom: 179px;
+    bottom: 10px;
     right: 39px;
+    z-index: 2;
 }
 .program-map-container{
     display: flex;
@@ -377,7 +385,7 @@ header {
     top: 77px;
 }
 .program-map{
-    width: 807px;
+    flex: 1;
 }
 /* 리스트 */
 .program-list-container{
@@ -576,6 +584,7 @@ header {
 }
 .table-content-wrapper{
     display: flex;
+    width: 975px;
 }
 .table-content-box{
     width: 325px;
@@ -688,11 +697,13 @@ header {
     display: flex;
     position: relative;
     top: 173px;
-    margin-top:48px;
     padding-bottom: 316px;
+    margin: 0 -20px;
+    margin-top:48px;
 }
-.left{
-    margin-right: 240px;
+.place-bottom-container .left, .place-bottom-container .right{
+    width: 50%;
+    padding : 0 20px;
 }
 .bottom-title{
     width: 82px;
@@ -781,25 +792,38 @@ footer p{
 
 
 /* 글자색 클래스 */
-.blue-font{
+.anytimeC{
     color : #2d53a4;
 }
-.orange-font{
+.anywhereC{
     color: #f4af64;
 }
-.sky-font{
+.anyoneC{
     color: #53c6d2;
 }
 /* 배경색 클래스 */
-.blue{
+.anytimeBG{
     background-color: #2d53a4;
 }
-.orange{
+.anywhereBG{
     background-color: #ed6e01;
 }
-.sky{
+.anyoneBG{
     background-color: #23aab7;
 }
-.purple{
+.hereBG{
     background-color: #574f9f;
+}
+
+@media (max-width : 1200px) {
+    .container{
+        width: 90%;
+    }
+    .table-content{
+        width: 300px;
+        overflow: hidden;
+    }
+    .time div:before{
+        width: 90vw;
+    }
 }
