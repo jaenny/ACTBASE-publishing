@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-@font-face {
-    font-family: 'NanumSquareRound';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap');
 
 *{
     box-sizing: border-box;
-    font-family: 'Noto Sans KR','NanumSquareRound', sans-serif;
+    font-family: 'Noto Sans KR','NanumSquare', sans-serif;
 }
 *:hover{
     transition-duration: .3s;
@@ -41,7 +35,7 @@ header {
     right: 0;
     z-index: 2;
     transform: translateX(-50%);
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.116);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.116);
     width: 100%;
 }
 .header-container{
@@ -88,18 +82,25 @@ header {
     opacity: 1;
     color: rgb(0, 0, 0);
 }
-
+/* 오른쪽 밑에 따라다닌 애 */
+.program-right{
+    position: fixed;
+    width: 118px;
+    bottom: 39px;
+    right: 39px;
+    z-index: 2;
+}
 
 /* 첫 화면 */
 .preview{
     width: 100%;
     height: 1080px;
     background : url(img/pattern.png) repeat;
-    background-size: cover;
     position: relative;
 }
 .preview-container{
     position: relative;
+    height: 100%;
 }
 .preview .stick-img{
     position: absolute;
@@ -112,34 +113,29 @@ header {
 .preview .icon{
     width: 100px;
     height: 100px;
+    position: absolute;
 }
 .mic{
-    position: absolute;
     top: 208px;
     left: 124px;
 }
 .headphone{
-    position: absolute;
     top: 538px;
     left: 49px;
 }
 .web{
-    position: absolute;
     top: 895px;
     left: 172px;
 }
 .link{
-    position: absolute;
     top: 334px;
     right: 194px;
 }
 .chat{
-    position: absolute;
     top: 667px;
     right: 80px;
 }
 .newspaper{
-    position: absolute;
     top: 813px;
     right: 224px;
     z-index: 1;
@@ -166,8 +162,8 @@ header {
 .mobile{
     width: 640px;
     height: 943px;
-    position: relative;
-    top: 141px;
+    position: absolute;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     background-image : url(img/mobile.png);
@@ -253,6 +249,9 @@ header {
     background : url(img/middle-bg.png);
     position: relative;
 }
+.intro .container{
+    position: relative;
+}
 .intro .stick-img{
     position: absolute;
     left: 86px;
@@ -269,8 +268,7 @@ header {
 }
 /* 각 섹션의 타이틀 */
 .title-container{
-    position: relative;
-    top: 77px;
+    padding-top: 77px;
 }
 .title-tab-container{
     display: flex;
@@ -300,15 +298,21 @@ header {
     text-align: center;
     color: black;
 }
+.intro-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+}
 /* 슬로건 */
 .slogan-container{
     display: flex;
     justify-content: space-around;
-    position: relative;
-    top: 170px;
+    /* position: relative; */
+    /* top: 170px; */
     height: 150px;
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 80px;
 }
 .slogan-wrap{
     padding : 0 30px;
@@ -363,8 +367,8 @@ header {
 /* 내용 */
 .intro-body{
     display: flex;
-    position: relative;
-    top: 300px;
+    /* position: relative; */
+    /* top: 300px; */
     margin: 0 -30px;
 }
 .intro-body div{
@@ -380,18 +384,9 @@ header {
     background-color : white;
     position: relative;
 }
-.program-right{
-    position: fixed;
-    width: 118px;
-    bottom: 10px;
-    right: 39px;
-    z-index: 2;
-}
 /* 프로그램 지도와 표 */
 .program-map-container{
     display: flex;
-    position: relative;
-    top: 77px;
 }
 /* 지도 */
 .program-map{
@@ -547,19 +542,19 @@ header {
 }
 /* 타임테이블 */
 .table-container{
-    position: relative;
-    top: 118px;
+    margin-top: 41px;
 }
 /* 날짜 */
 .date{
     display: flex;
     justify-content: center;
 }
-.date div{
+.date div a{
+    display: block;
     width: 120px;
-    font-family: 'NanumSquareRound';
+    font-family: 'NanumSquare';
     font-size: 24px;
-    font-weight: normal;
+    font-weight: 600;
     font-stretch: normal;
     font-style: normal;
     letter-spacing: -1.8px;
@@ -569,7 +564,7 @@ header {
     padding-bottom: 9px;
     border-bottom: 2px solid #aaaaaa;
 }
-.date div:hover{
+.date div a:hover{
     border-bottom: 2px solid #23aab7;
     font-weight: 600;
     color: #23aab7;
@@ -637,7 +632,7 @@ header {
     width: 285px;
     height: 50px;
     font-size: 18px;
-    font-family: 'NanumSquareRound';
+    font-family: 'NanumSquare';
     border: solid 1px #2d53a4;
     background-color: #ffffff;
     position: relative;
@@ -721,7 +716,7 @@ header {
     margin-top: 6px;
 }
 .seven ul li{
-    font-family: 'NanumSquareRound';
+    font-family: 'NanumSquare';
 }
 
 
@@ -734,6 +729,7 @@ header {
 .place .container .title-container{
     position: absolute;
     top: 77px;
+    padding-top: 0;
 }
 /* 지도 */
 .place .map{
@@ -759,7 +755,7 @@ header {
     width: 82px;
     height: 22px;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -780,7 +776,7 @@ header {
     text-align: center;
     border-radius: 50%;
     line-height: 32px;
-    margin-right: 36px;
+    margin-right: 22px;
 }
 .line1{
     background-color: #3d61ae;
@@ -789,8 +785,9 @@ header {
     background-color: #71ce7f;
 }
 .address{
+    font-family: 'NanumSquare';
     font-size: 22px;
-    font-weight: normal;
+    font-weight: 100;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.55;
@@ -803,7 +800,7 @@ header {
     height: 34px;
     border: solid 1px #23aab7;
     background-color: #ffffff;
-    margin-right: 36px;
+    margin-right: 22px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -833,19 +830,18 @@ footer p{
     padding: 0;
     margin: 0;
     transform: translate(-50%,-50%);
-    font-family: 'NanumSquareRound';
+    font-family: 'NanumSquare';
 }
 
-
-@media (max-width : 1140px) {
-    section{
-        width: 350% !important;
+@media (max-width:1140px) {
+    .container{
+        width: 100%;
     }
     .table-content{
-        width: 300px;
+        width: calc(100vw - 150px);
         overflow: hidden;
     }
     .time div:before{
-        width: 90vw;
+        width: 100vw;
     }
 }
